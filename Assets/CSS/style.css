@@ -170,7 +170,7 @@ h3, h2 {
 
 .auth-image {
   float: left;
-  width: 30%
+  width: 33%;
   height: auto;
   margin-top: 10px;
   margin-right: 25px;
@@ -213,21 +213,25 @@ input[type=submit] {
   color: #fff;
   cursor: pointer;
   background: #4aaaa5;
-  border: 0 none;
-}
+  border: 0 none;}
+
+  /* on screens that are 980px wide or less, make picture width 33% of page. */
+  @media screen and (max-width: 980px)  {
+     .auth-image {
+      width: 33%; height: auto
+     }
+}   
+/* on screens that are 768px wide or less, make picture width 50% of page. */
+@media screen and (max-width: 768px) {
+  .auth-image {width: 50%; height: auto
+  }
+  }
+
 /* On screens that are 640px wide or less, make masthead static and widen picture to full width */
 @media screen and (max-width: 640px) {
   #masthead {position: static;
-  #auth-image:width:100%;}
+ }
+  .auth-image {width: 100%; height: auto}
 }
-/* on screens that are 768px wide or less, make picture width 50% of page. */
-@media screen and (max-width: 768px) {
-#auth-image {width: 50%;
-}
-}
-/* on screens that are 980px wide or less, make picture width 30% of page. */
-  @media screen and (max-width: 980px) {
-    #navbar {position: static;}
-    #auth-image {width: 33%;
-    }
-}
+
+
